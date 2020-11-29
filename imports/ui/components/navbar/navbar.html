@@ -1,0 +1,21 @@
+<template name="navBar">
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                {{#if currentUser}}
+                    <a class="navbar-brand text-white">Welcome {{Username}}!!</a>
+                {{/if}}
+            </div>
+            <div id="navbar" class="navbar-collapse collapse text-right pt-adjust">
+                {{> loginButtons}}
+            </div>
+        </div>
+    </nav>
+</template>

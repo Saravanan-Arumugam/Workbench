@@ -1,0 +1,26 @@
+<template name="deleteAppointmentModal">
+    <div class="modal fade deleteAppointmentModal" id="deleteModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title">Delete Appointment</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure want to delete this appointment?</p>
+                    <p>
+                        Title: {{appointment.title}}
+                        Start Date: {{formatDate appointment.start}}
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary btndelete">Delete</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</template>
