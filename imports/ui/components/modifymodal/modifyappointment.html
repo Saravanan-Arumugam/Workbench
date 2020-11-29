@@ -1,0 +1,57 @@
+<template name="modifyAppointment">
+    <div class="modal fade modifyAppointmentModal" id="modifyModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title">Create Remainder (Date: {{eventDate}})</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                    <form id="createRemForm">
+                        <table style="width:40%" class="center">
+                            <tr>
+                                <td>Title:</td>
+                                <td><input type="text" name="eventTitle" placeholder="Title"></td>
+                            </tr>
+                            <tr>
+                                <td>Description:</td>
+                                <td><input type="text" name="eventDesc" placeholder="Description"></td>
+                            </tr>
+                            <tr>
+                                <td>Time:</td>
+                                <td>
+                                    <div class="startTime">
+                                        {{> datePicker}}
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Event Type</td>
+                                <td>
+                                    <select class="form-control" name="eventType">
+                                        <option value="none">Select Type</option>
+                                        <option value="red">Meeting</option>
+                                        <option value="blue">Traning</option>
+                                        <option value="green">Others</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" text-align="right">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary clearform">Clear</button>
+                                    <button type="submit" class="btn btn-success">Create Event</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    </p>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>    
+</template>
